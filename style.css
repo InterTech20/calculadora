@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222222;    
+    color: black;
+}
+
+.form{
+    display: grid;
+    grid-gap: 1px;
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(100px,100px) repeat(5, 1fr);   
+
+    width: auto;
+    background-color: #111;
+    border: 2px solid #777;
+    box-shadow: 0 1px 10px rgb(0, 0, .5);
+   
+}
+
+input {
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.zero{
+    grid-column:span 2;
+}
+
+.text {
+    width: 400px;
+    background-color:#222;
+    color: white;    
+    grid-column:span 4;
+    font-size: 40px;
+    text-align: right;
+    cursor:auto;
+}
+
+.delete {
+    grid-column:span 3;
+}
+
+.delete,.operators,.same{
+    color: white;
+    background-color: #222;   
+}
+
+.number {
+    color: white;
+    background-color:black;    
+}
+
+.operators:hover,.number:hover,
+.same:hover,.delete:hover {
+        color: black;
+        background-color: #555;
+        border: 2px solid #777;
+        box-shadow:  0px 0px 14px 0px #888;
+        cursor: pointer;    
+}
+
+.number:active,.delete:active,
+.operators:active,.same:active{
+    color: white;
+    text-shadow:0 0 14px wheat ;
+    background-color: #222;
+    border: 2px solid white;  
+}
+ 

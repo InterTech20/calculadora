@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body > 
+
+    <form class="form" action="" name="forms">
+        <input class="text" type="text" name="screen" id="answer" readonly onmousedown="return false">
+
+        <input class="delete" type="button" value="CE" onclick="forms.screen.value=' '">
+        <input class="operators" type="button" value="÷" onclick="forms.screen.value+='/'">
+
+        <input class="number" type="button" value="7" onclick="forms.screen.value+='7'">
+        <input class="number" type="button" value="8" onclick="forms.screen.value+='8'">
+        <input class="number" type="button" value="9" onclick="forms.screen.value+='9'">
+        <input class="operators" type="button" value="x" onclick="forms.screen.value+='*'">
+
+        <input class="number" type="button" value="4" onclick="forms.screen.value+='4'">
+        <input class="number" type="button" value="5" onclick="forms.screen.value+='5'">
+        <input class="number" type="button" value="6" onclick="forms.screen.value+='6'">
+        <input class="operators" type="button" value="-" onclick="forms.screen.value+='-'">
+
+        <input class="number" type="button" value="1" onclick="forms.screen.value+='1'">
+        <input class="number" type="button" value="2" onclick="forms.screen.value+='2'">
+        <input class="number" type="button" value="3" onclick="forms.screen.value+='3'">
+        <input class="operators" type="button" value="+" onclick="forms.screen.value+='+'">
+
+        <input class="number zero" type="button" value="0" onclick="forms.screen.value+='0'">
+        <input class="number" type="button" value="." onclick="forms.screen.value+='.'">
+        <input class="same" type="button" value="=" onclick="forms.screen.value= eval(forms.screen.value)">
+
+    </form>
+</body>
+</html>
